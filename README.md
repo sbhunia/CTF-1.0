@@ -35,5 +35,42 @@ This project templates includes 2 branches to start with.
 | Master         | Protected branch.  You cannot push directly to master.  This branch should be what you push to your test server (ceclnx for example) or other devices for your client to review. |
 | . . .          | Thereafter, you should follow the code management strategy defined and agreed upon by the team.  I recommend a branch from master for each sprint or interval.  From the sprint-branch, I recommend branching by issue.  Throughout the sprint, rebase your issue branch regularly especially begore a commit.  If an issue is incomplete during the prescribed sprint, commit it to the next spring branch.  This approach gives the master branch an additional degree of protection. |
 
+# Deployment
+
+1. The Ubuntu Server was given to us after following this link and submitting an openstack server request:
+
+    https://miamioh.teamdynamix.com/TDClient/1813/Portal/Requests/ServiceOfferingDet?ID=841 |
+
+    When recieving our Ubuntu VM, we were given a domain name and we were also given a private key file so we could log into the server remotely. Here is a link to the domain.
+
+    http://miamiohcybersecurityctf.capstone.csi.miamioh.edu:8000/
+    
+2. After logging into the server, we did: 
+
+    sudo apt update
+
+    sudo apt upgrade
+
+3. To install Docker
+
+    sudo apt install docker.io
+
+4. To start and enable Docker
+
+    sudo systemctl start docker
+
+    sudo systemctl enable docker
+5. To check that Docker is running (we are running 
+Docker version 24.0.5)
+
+    sudo docker --version
+
+6. Once docker is running you can pull ctfd from it's repository
+
+    docker pull ctfd/ctfd
+7. To run the ctfd docker image in a container the -d option runs the container in detached mode so it runs in the background and the -p specifies the port that runs from the website to the container.
+
+    docker run -d -p 8000:8000 --name MUctfd ctfd/ctfd
+
  
 
