@@ -1,0 +1,6 @@
+To get the Flag: 
+steghide extract -sf embed1.jpg -p
+
+No PW
+
+MUCTF{embed_a_file}

@@ -1,0 +1,10 @@
+To solve this problem, I recommended installing kali linux using WSL 2. Then I installed steghide and stegscracker.
+
+This command brute forces the pw list:
+stegcracker embed3.jpg Passwords.txt
+
+Once you have the pw you can use this command to get the flag:
+steghide extract -sf embed3.jpg -p <pw found in previous step>
+
+This gives you the flag:
+MUCTF{babys_brute_force}

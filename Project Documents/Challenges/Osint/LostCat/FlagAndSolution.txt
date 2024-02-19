@@ -1,0 +1,9 @@
+Get the GPS latitude and longtitude from the exif data. You can do this with windows or upload the image to an online tool.
+
+Example: https://jimpl.com/
+
+Once you have the coordinates enter them in Google Maps to obtain the plus code:
+https://www.google.com/maps/place/20%C2%B047'27.5%22N+156%C2%B057'50.0%22W/@20.7909778,-156.9664721,17z/data=!3m1!4b1!4m4!3m3!8m2!3d20.7909778!4d-156.9638972?entry=ttu
+
+
+Flag: MUCTF{Q2RP+9CX Lanai City, Hawaii}
