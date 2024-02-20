@@ -1,8 +1,9 @@
 # Challenge expected solve
-1. unzip the file and open the index.html file 
+1. The user clicks the container at the following link 
+http://miamiohcybersecurityctf.capstone.csi.miamioh.edu:25001
 2. Open inspect-element.
 3. Search for the commented button "showFlagButton"
-4. Uncomment the button and refresh
-6. The button should appear after pressed the flag is shown
-7. Submit the flag in the CTF
-8. Sucess!
+4. Uncomment the button 
+6. The button should appear after uncommented 
+7. press the button and flag.php will be downloaded.
+8. submit the flag and success!

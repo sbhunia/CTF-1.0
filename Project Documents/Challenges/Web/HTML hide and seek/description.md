@@ -6,5 +6,5 @@ removed by our glorious programmers hired from fiver.
 Problemo solved!
 
 ## File
-Download the zip and undip and navagate to the .index file to begin 
-your search.
+Click the link http://miamiohcybersecurityctf.capstone.csi.miamioh.edu:25001
+to begin
