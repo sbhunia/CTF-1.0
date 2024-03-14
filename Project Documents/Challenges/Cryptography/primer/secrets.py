@@ -1,0 +1,1 @@
+FLAG1 = "MUCTF{a_single_prime}"
