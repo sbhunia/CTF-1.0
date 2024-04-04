@@ -5,11 +5,11 @@ Category:
 Trivia
 
 Problem Description:
-What was the Benton office number of Dr. Bhunia Fall 2023?
-His old office number is still on the website, however he has a new one now.
+What is Dr. Bhunia's office number in DSB?
 
 Flag Format: MUCTF{....}
 
+-AB
 
 
 Points:

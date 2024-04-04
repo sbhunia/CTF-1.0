@@ -10,3 +10,6 @@ Connect using ncat and answer the questions correctly to receive a flag.
 
 # Description:
 Search the web to learn more about Cyber Security. 
+
+#Points 
+10
