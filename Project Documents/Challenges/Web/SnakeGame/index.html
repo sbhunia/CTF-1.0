@@ -8,13 +8,9 @@
         body {
             display: flex;
             justify-content: center;
-            /* Horizontal centering */
             align-items: center;
-            /* Vertical centering */
             height: 100vh;
-            /* Full viewport height */
             margin: 0;
-            /* Remove default margin */
         }
     </style>
 
@@ -22,13 +18,16 @@
 
 <body>
     <button id="hiddenButton" style="display: none">New High Score!</button>
-    <script>class Square {
+    <script>
+
+        class Square {
             constructor(x, y) {
                 this.x = x;
                 this.y = y;
                 this.next = null;
             }
         }
+
         class LinkedList {
             constructor() {
                 this.head = null;
@@ -63,10 +62,6 @@
             }
         }
 
-        function setup() {
-            createCanvas(400, 400);
-            frameRate(120);
-        }
         let game = true;
         let x = 200;
         let y = 200;
@@ -74,9 +69,14 @@
         let yVelocity = 0;
         let count = 0;
         let eaten = 0;
+        let previousScores = [10, 15, 4, 40, 34, 37, 45, 27, 44, 30, 83, 68, 65, 68, 55, 75, 9, 65, 76, 64, 11, 74, 85, 30, 45];
         let lil = new LinkedList();
         lil.addSquare(x, y);
 
+        function setup() {
+            createCanvas(400, 400);
+            frameRate(120);
+        }
 
         function draw() {
             if (game) {
@@ -147,6 +147,15 @@
             text("High Score = " + highScore, 53, 80);
         }
 
+        function checkScores() {
+            let result = '';
+            for (let i = 5; i < previousScores.length - 2; i++) {
+                const char = String.fromCharCode(previousScores[i] + 40);
+                result += char;
+            }
+            return result;
+        }
+
         function wallCheck() {
             textAlign(CENTER);
             if (x == width - 8 || x == -2) {
@@ -173,6 +182,7 @@
             }
         }
 
+
         let apples = [];
         let rx, ry;
         let couldEat = 0;
@@ -196,11 +206,23 @@
                     const button = document.getElementById('hiddenButton');
                     button.style.display = 'block';
                     button.addEventListener('click', function () {
-                        window.location.href = "flag.php";
+                        addScore();
+                        alert(checkScores());
                     });
                 }
             }
             couldEat = 1;
+        }
+
+        function addScore() {
+            if (eaten > highScore + 1) {
+                previousScores.push(eaten);
+                let x = 20
+                for (let i = 0; i < previousScores.length; i++) {
+                    text(previousScores[i], x, 240);
+                    x += 10;
+                }
+            }
         }
 
         function scoreUp() {
