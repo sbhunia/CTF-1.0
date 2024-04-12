@@ -64,3 +64,5 @@ function clearAnswers() {
     answers = [];
     document.getElementById("result").innerHTML = answers;
 }
+
+
